@@ -28,7 +28,8 @@ const Home = () => {
         <div className="events-wrapper">
           {events.map((item, index) => (
             <Card 
-              key={index} 
+              key={index}
+              id={item.id}
               title={item.title} 
               date={item.date}
               description={item.description} 
