@@ -4,11 +4,12 @@ import { CiCamera } from "react-icons/ci";
 
 const Profile = () => {
   const profileInfo = [
-    { name: "Full Name", value: "Allan Njoroge" },
-    { name: "Phone Number", value: "+254700056642" },
+    { name: "First Name", value: "Allan" },
+    { name: "Last Name", value: "Njoroge" },
     { name: "Email Address", value: "allan@gmail.com" },
-    { name: "Gender", value: "Male" },
     { name: "Country", value: "Kenya" },
+    { name: "Phone Number", value: "+254700056642" },
+    { name: "Gender", value: "Male" },
   ];
 
   return (
@@ -25,13 +26,17 @@ const Profile = () => {
             </div>
           </div>
           {/*--text info section*/}
-          <div className="profile-text-section">
+          <form className="profile-text-section">
             {profileInfo.map((item, index) => (
-              <h3 key={index} className="h3">
-                {item.name}: <span>{item.value}</span>
-              </h3>
+              <div className="single-input">
+                <label htmlFor='' className='input-label'>{item.name}</label>
+                <input type="text" value={item.value} className="profile-input" />
+              </div>
             ))}
-          </div>
+            <div className="sbt-btn-container">
+              <button type="submit" className="pry-btn sbt-btn">Update</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

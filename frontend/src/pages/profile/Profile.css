@@ -1,16 +1,21 @@
 .profile-section{
     margin: auto;
 }
+.info-section{
+    margin-top: 50px;
+}
 .profile-img-container{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    margin: auto;
 }
 .profile-img{
     width: 100%;
+    margin: auto;
     height: 100%;
     background-position: center;
     object-fit: cover;
@@ -42,19 +47,42 @@
     gap: 50px;
 }
 .profile-text-section{
+    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.single-input{
+    position: relative;
+}
+.input-label{
+    position: absolute;
+    left: 30px;
+    top: -12px;
+    font-size: 1rem;
+}
+.sbt-btn-container{
     display: flex;
-    gap: 10px;
-    flex-direction: column;
-    flex: start;
-    text-align: left;
-    margin: auto;
+    width: 100%;
+    justify-content: center;
+    height: full;
+    align-items: center;
 }
-.h3{
-    font-weight: 600;
-    font-size: 1.5rem;
-    text-align: left;
+.profile-input{
+    width: 90%;
 }
-.h3 span{
-    font-weight: 400;
-    color: gray;
+@media only screen and (max-width: 768px) {
+    .info-section{
+        display: grid;
+        gap: 50px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .info-section{
+       width: 100%;
+    }
+    .profile-text-section{
+        gap: 40px;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
 }
