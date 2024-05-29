@@ -2,8 +2,14 @@ import { useState } from 'react'
 import Card from "../../components/Card/Card";
 import "./MyEvents.css";
 import { RiDeleteBinFill } from "react-icons/ri";
+import useFetch from '../../Hooks/useFetch'
 
 const MyEvents = () => {
+
+  const { data, laoding, error } = useFetch("/events")
+  
+  console.log(data)
+
   return (
     <div className="section myevents-section">
       <div className="section-div">
