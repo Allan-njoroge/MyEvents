@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "Music Festival",
+    "description": "Join us for a day of live music from local and international artists.",
+    "price": 20,
+    "location": "Central Park",
+    "date": "2024-06-15",
+    "startTime": "12:00 PM",
+    "endTime": "10:00 PM"
+  },
+  {
+    "id": 2,
+    "title": "Food Expo",
+    "description": "Explore the world of culinary delights with food from around the globe.",
+    "price": 10,
+    "location": "Convention Center",
+    "date": "2024-07-20",
+    "startTime": "10:00 AM",
+    "endTime": "6:00 PM"
+  },
+  {
+    "id": 3,
+    "title": "Art Exhibition",
+    "description": "Experience the creativity of local artists showcasing their latest works.",
+    "price": 15,
+    "location": "Art Gallery",
+    "date": "2024-08-05",
+    "startTime": "11:00 AM",
+    "endTime": "7:00 PM"
+  },
+  {
+    "id": 4,
+    "title": "Fitness Bootcamp",
+    "description": "Get fit and have fun with our outdoor fitness bootcamp session.",
+    "price": 5,
+    "location": "City Park",
+    "date": "2024-09-10",
+    "startTime": "9:00 AM",
+    "endTime": "11:00 AM"
+  },
+  {
+    "id": 5,
+    "title": "Tech Conference",
+    "description": "Stay ahead of the curve with the latest in technology trends and innovations.",
+    "price": 30,
+    "location": "Tech Hub",
+    "date": "2024-10-25",
+    "startTime": "9:00 AM",
+    "endTime": "5:00 PM"
+  },
+  {
+    "id": 6,
+    "title": "Fashion Show",
+    "description": "Witness the glamour and style of the fashion world on the runway.",
+    "price": 25,
+    "location": "Fashion Center",
+    "date": "2024-11-12",
+    "startTime": "7:00 PM",
+    "endTime": "10:00 PM"
+  },
+  {
+    "id": 7,
+    "title": "Movie Night",
+    "description": "Enjoy a movie under the stars with friends and family.",
+    "price": 8,
+    "location": "Outdoor Cinema",
+    "date": "2024-12-20",
+    "startTime": "6:00 PM",
+    "endTime": "10:00 PM"
+  },
+  {
+    "id": 8,
+    "title": "Gaming Tournament",
+    "description": "Compete against other gamers in a thrilling gaming competition.",
+    "price": 12,
+    "location": "Gaming Arena",
+    "date": "2025-01-15",
+    "startTime": "2:00 PM",
+    "endTime": "8:00 PM"
+  },
+  {
+    "id": 9,
+    "title": "Yoga Retreat",
+    "description": "Relax and rejuvenate your mind, body, and soul with our yoga retreat.",
+    "price": 50,
+    "location": "Mountain Resort",
+    "date": "2025-02-10",
+    "startTime": "8:00 AM",
+    "endTime": "5:00 PM"
+  },
+  {
+    "id": 10,
+    "title": "Book Club Meeting",
+    "description": "Discuss the latest book and share your thoughts with fellow book lovers.",
+    "price": 0,
+    "location": "Library",
+    "date": "2025-03-05",
+    "startTime": "3:00 PM",
+    "endTime": "5:00 PM"
+  },
+  {
+    "id": 11,
+    "title": "Cooking Class",
+    "description": "Learn to cook delicious meals with our expert chefs.",
+    "price": 20,
+    "location": "Cooking School",
+    "date": "2025-04-18",
+    "startTime": "11:00 AM",
+    "endTime": "2:00 PM"
+  },
+  {
+    "id": 12,
+    "title": "Dance Workshop",
+    "description": "Explore various dance styles and improve your dancing skills.",
+    "price": 15,
+    "location": "Dance Studio",
+    "date": "2025-05-08",
+    "startTime": "6:00 PM",
+    "endTime": "8:00 PM"
+  },
+  {
+    "id": 13,
+    "title": "Photography Exhibition",
+    "description": "Marvel at stunning photographs capturing moments from around the world.",
+    "price": 10,
+    "location": "Art Museum",
+    "date": "2025-06-22",
+    "startTime": "10:00 AM",
+    "endTime": "6:00 PM"
+  },
+  {
+    "id": 14,
+    "title": "Wine Tasting Event",
+    "description": "Savor a variety of exquisite wines paired with gourmet cheeses.",
+    "price": 35,
+    "location": "Winery",
+    "date": "2025-07-17",
+    "startTime": "4:00 PM",
+    "endTime": "7:00 PM"
+  },
+  {
+    "id": 15,
+    "title": "Craft Fair",
+    "description": "Discover unique handmade crafts and support local artisans.",
+    "price": 5,
+    "location": "Community Center",
+    "date": "2025-08-10",
+    "startTime": "12:00 PM",
+    "endTime": "6:00 PM"
+  },
+  {
+    "id": 16,
+    "title": "Science Exhibition",
+    "description": "Explore the wonders of science with interactive exhibits and demonstrations.",
+    "price": 10,
+    "location": "Science Center",
+    "date": "2025-09-28",
+    "startTime": "9:00 AM",
+    "endTime": "4:00 PM"
+  },
+  {
+    "id": 17,
+    "title": "Comedy Night",
+    "description": "Laugh out loud with hilarious stand-up comedy performances.",
+    "price": 15,
+    "location": "Comedy Club",
+    "date": "2025-10-15",
+    "startTime": "8:00 PM",
+    "endTime": "10:00 PM"
+  },
+  {
+    "id": 18,
+    "title": "Gardening Workshop",
+    "description": "Learn gardening tips and tricks to create a beautiful and thriving garden.",
+    "price": 10,
+    "location": "Botanical Garden",
+    "date": "2025-11-20",
+    "startTime": "10:00 AM",
+    "endTime": "1:00 PM"
+  },
+  {
+    "id": 19,
+    "title": "Artisan Market",
+    "description": "Browse through stalls of handmade goods crafted by local artisans.",
+    "price": 0,
+    "location": "Market Square",
+    "date": "2025-12-05",
+    "startTime": "10:00 AM",
+    "endTime": "4:00 PM"
+  },
+  {
+    "id": 20,
+    "title": "Karaoke Night",
+    "description": "Sing your heart out and showcase your vocal talents at our karaoke event.",
+    "price": 20,
+    "location": "The Bar",
+    "date": "2025-12-05",
+    "startTime": "10:00 AM",
+    "endTime": "4:00 PM"
+  }
+]
