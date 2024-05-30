@@ -7,7 +7,6 @@ const UsersSchema = new mongoose.Schema({
     phoneNumber: { type: String },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    gender: { type: String }
 }, { timeStamps: true })
 
 module.exports = mongoose.model("Users", UsersSchema)
