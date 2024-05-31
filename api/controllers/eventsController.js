@@ -1,20 +1,20 @@
 // Get all events
-exports.getAllEvents = async (req, res) => {};
+export const getAllEvents = async (req, res) => {};
 
 // Get events by category
-exports.getEventsByCategory = async (req, res) => {};
+export const getEventsByCategory = async (req, res) => {};
 
 // Get event by ID
-exports.getEventById = async (req, res) => {};
+export const getEventById = async (req, res) => {};
 
 // Get event by title
-exports.getEventByTitle = async (req, res) => {};
+export const getEventByTitle = async (req, res) => {};
 
 // Create new event
-exports.createEvent = async (req, res) => {};
+export const createEvent = async (req, res) => {};
 
 // Update event
-exports.updateEvent = async (req, res) => {};
+export const updateEvent = async (req, res) => {};
 
 // Delete event
-exports.deleteEvent = async (req, res) => {};
+export const deleteEvent = async (req, res) => {};

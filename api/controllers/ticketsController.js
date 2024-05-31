@@ -1,9 +1,8 @@
-const Ticket = require('../models/Tickets');
-const QRCode = require('qrcode');
-const { v4: uuidv4 } = require('uuid');
+import QRCode from 'qrcode';
+import { v4 as uuidv4 } from 'uuid';
 
 // Create a new ticket
-exports.createTicket = async (req, res) => {
+export const createTicket = async (req, res) => {
     const { firstName, secondName, email, event } = req.body;
 
     try {
