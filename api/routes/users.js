@@ -1,8 +1,9 @@
-const router = require('express').Router()
-const User = require('../models/Users')
+import express from 'express'
+
+const router = express.Router()
 
 router.get('/id', async(req, res) => {
     const userId = req.params.id
 })
 
-module.exports = router
+export default router

@@ -1,7 +1,9 @@
-const router = require('express').Router();
-const ticketsController = require('../controllers/ticketsController');
+import express from 'express'
+import { createTicket } from '../controllers/ticketsController.js';
+
+const router = express.Router()
 
 // Route to create a new ticket
-router.post('/generate', ticketsController.createTicket);
+router.post('/generate', createTicket);
 
-module.exports = router;
+export default router;
