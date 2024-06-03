@@ -1,12 +1,45 @@
 import "./Home.css";
 import Card from "../../components/Card/Card";
 import Footer from "../../components/Footer/Footer";
-import EventsData from '../../mockData/events.json'
+// import EventsData from '../../mockData/events.json'
 import Image from '../../assets/ME.png'
+import axios from 'axios'
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  // const events = EventsData
+  const [events, setEvents] = useState([])
+  const [title, setTitle] = useState('')
 
-  const events = EventsData
+  useEffect(() => {
+    document.title = "Home - MyEvents"
+
+    const fetchEvents = async () => {
+      try{
+        const res = await axios.get('http://localhost:8000/api/events/');
+        setEvents(res.data)
+      } catch (err){
+        console.log(events)
+      }
+    }
+    fetchEvents()
+  }, [])
+
+  // function to search for an event
+  const searchEvent = async () => {
+    try {
+      const res = await axios.get(`http://localhost:8000/api/events/${title}`)
+      setEvents(res.data)
+      console.log(res.data)
+    }
+    catch (err) {
+      console.log(err)
+    }
+  }
+
+  const setInputValue = (e) => {
+    setTitle(e.target.value)
+  }
 
   return (
     <>
@@ -17,16 +50,16 @@ const Home = () => {
         </div>
       </section>
       {/*--Search Section--*/}
-      <section class="search-section">
-        <div class="section-div">
-          <input type="text" placeholder="Search Event" id="seacrh-input" />
-          <button class="pry-btn search-btn">Search</button>
+      <section className="search-section">
+        <div className="section-div">
+          <input type="text" placeholder="Search Event" id="search-input" value={title} onChange={setInputValue} />
+          <button className="pry-btn search-btn" onClick={searchEvent}>Search</button>
         </div>
       </section>
       {/*--Events Card Section--*/}
       <section className="events-section">
         <div className="events-wrapper">
-          {events.map((item, index) => (
+          {events && events.map((item, index) => (
             <Card 
               key={index}
               id={item.id}
@@ -35,8 +68,8 @@ const Home = () => {
               description={item.description} 
               price={item.price}
               location={item.location}
-              startTime={item.startTime}
-              endTime={item.endTime}
+              startTime={item.start_time}
+              endTime={item.end_time}
             />
           ))}
         </div>
