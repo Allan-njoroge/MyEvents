@@ -28,7 +28,7 @@ const Home = () => {
   // function to search for an event
   const searchEvent = async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/api/events/${title}`)
+      const res = await axios.get(`http://localhost:8000/api/events/title/${title}`)
       setEvents(res.data)
       console.log(res.data)
     }
