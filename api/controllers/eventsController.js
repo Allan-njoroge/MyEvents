@@ -28,18 +28,47 @@ export const getEventByTitle = async (req, res) => {
     
 };
 
-// Add an my events
-export const addEvent = async (req, res) => {
+// Get event by id
+export const getEventById = async (req, res) => {
     try{
-        const insertEvent = 'INSERT INTO my_events (event_id) VALUES (?)'
-        await db.query(insertEvent, [req.body.event_id])
+        const eventId = req.params.id
+        const getEvent = "SELECT * FROM events WHERE id = ?"
+        db.query(getEvent, [eventId], (err, data) => {
+            if(err) return res.status(500).json(err)
+            if(data.length === 0) return res.status(404).json("No Event Found")
 
-        res.status(200).json("Event successfully events")
+            res.status(200).json(data[0])
+        })
+    } catch (err) {
+        res.status(500).json(err)
     }
-    catch (err) {
-        res.status(500).json("Error adding events to myEvents")
-    }
-}
+};
+
+// // Add an my events
+// export const addEvent = async (req, res) => {
+//     try{
+//         const userId = req.body.user.id;
+//         const eventId = req.body.event.id
+
+//         // check for existing event with the same id in the my_events table
+//         const existingEvent = 'SELECT * FROM events e JOIN my_events m e.id = m.e_id WHERE m.u_id = ?'
+//         db.query(existingEvent, [userId], (err, data) => {
+//             if(err) return res.status(500).json(err)
+
+//             if(data.length !== 0) return res.status(409).json("Event already reserved");
+
+//             // add the event to the my_events table if event is not in tables
+//             const insertEvent = 'INSERT INTO my_events (e_id, u_id) VALUES (?)'
+//             db.query(insertEvent, [eventId, userId], (err, data) => {
+//                 if(err) return res.status(500).json(err)
+//                 return res.status(200).json("Event successfully added to My Events")
+//             })
+//         })
+//     }
+//     catch (err) {
+//         res.status(500).json(err)
+//     }
+// }
 
 // Delete event
 export const deleteEvent = async (req, res) => {
@@ -51,16 +80,16 @@ export const deleteEvent = async (req, res) => {
     })
 };
 
-// MyEvents
-export const myEvents = async (req, res) => {
-    const userId = JSON.parse(localStorage.getItem("user")).id;
-    const events = 'SELECT e.*, m.id FROM events e, my_events m JOIN ON e.id = m.e_id WHERE m.u_id = ?';
+// // MyEvents
+// export const myEvents = async (req, res) => {
+//     const userId = req.body.user.id
+//     const events = 'SELECT e.*, m.id FROM events e, my_events m JOIN ON e.id = m.e_id WHERE m.u_id = ?';
 
-    db.query(events, [userId], (err, data) => {
-        if(err) return res.status(500).json(err)
+//     await db.query(events, [userId], (err, data) => {
+//         if(err) return res.status(500).json(err)
 
-        if(data.length === 0) return res.status(404).json("No events found!")
+//         if(data.length === 0) return res.status(404).json("No events found!")
 
-        return res.json(200).json(data)
-    })
-};
+//         return res.json(200).json(data)
+//     })
+// };
