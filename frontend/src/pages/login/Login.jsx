@@ -33,7 +33,7 @@ const Login = () => {
   return (
     <section className="section">
       <div className="section-container">
-        <form action="">
+        <form action="" data-aos="fade-up">
           <h1>LOGIN TO YOUR ACCOUNT</h1>
           <div className="form-div">
             <input type="email" className="email" placeholder="Email Address" name="emailAddress" required onChange={handleChange} />

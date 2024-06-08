@@ -46,7 +46,7 @@ const Home = () => {
       {/*--Hero Section*/}
       <section className="section header-section">
         <div className="section-div">
-          <h1>Get A Chance To Create And Attend Events Using MyEvents</h1>
+          <h1 data-aos="fade-up">Get A Chance To Create And Attend Events Using MyEvents</h1>
         </div>
       </section>
       {/*--Search Section--*/}

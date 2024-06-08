@@ -2,11 +2,20 @@ import './App.css'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Home, Login, Profile, Register, SingleEvent } from './pages'
 import Layout from './utils/Layout'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { AuthContext } from './context/AuthContext'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      easing: 'ease',
+      duration: 1200,
+    })
+  }, [])
   const { currentUser } = useContext(AuthContext)
   return (
     <BrowserRouter>

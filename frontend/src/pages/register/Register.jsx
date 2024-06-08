@@ -33,7 +33,7 @@ const Register = () => {
   return (
     <section className="section">
       <div className="section-container">
-        <form>
+        <form data-aos="fade-up">
           <h1>CREATE AN ACCOUNT</h1>
           <div className="form-div">
             <input type="text" placeholder="First Name" name="firstName" required  onChange={handleChange} />
