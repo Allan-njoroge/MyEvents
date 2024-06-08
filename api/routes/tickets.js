@@ -1,9 +1,9 @@
 import express from 'express'
-import { createTicket } from '../controllers/ticketsController.js';
+import { rsvp } from '../controllers/ticketsController.js';
 
 const router = express.Router()
 
 // Route to create a new ticket
-router.post('/generate', createTicket);
+router.post('/rsvp/:id', rsvp);
 
 export default router;

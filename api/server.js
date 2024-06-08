@@ -1,50 +1,35 @@
-const express = require('express');
+import express from 'express';
 const app = express();
-const dotenv = require('dotenv');
-const mongoose = require('mongoose');
-const path = require('path');
-const { fileURLToPath } = require('url');
-const jwt = require('jsonwebtoken');
-const cookieParser = require('cookie-parser')
+import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser'
+import cors from 'cors'
+import { db } from './utils/db.js'
 
 // Import routes
-const authRoute = require("./routes/auth");
-const eventsRoute = require("./routes/events");
-const usersRoute = require("./routes/users");
-const ticketsRoute = require("./routes/tickets");
-
+import authRoute from "./routes/auth.js";
+import eventsRoute from "./routes/events.js";
+import usersRoute from "./routes/users.js";
+import ticketsRoute from "./routes/tickets.js";
 
 dotenv.config(); // Load the environment variables
-
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO_DB_URL)
-.then(() => console.log('Connected to MongoDB...'))
-.catch((err) => console.log(err));
-
 app.use(express.json());
+app.use(cors())
+app.use(cookieParser())
+
+// Connect to MySQL
+db.connect((err) => {
+    if (err) {
+        console.error('Error connecting to MySQL: ' + err.stack);
+        return;
+    }
+    console.log('Connected to MySQL as id ' + db.threadId);
+});
 
 
 
-// Serve static files
-const staticFilesDirectory = path.join(__dirname, 'static');
-app.use(express.static(staticFilesDirectory));
-
-
-// Middlware
-// JWT middleware
-const verifyToken = (req, res, next) => {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-    
-    if (token == null) return res.sendStatus(403);
-
-    jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
-        if (err) return res.sendStatus(403);
-        req.user = user;
-        next();
-    });
-};
-
+app.get('/', (req, res) => {
+    res.json("server is running...")
+})
 
 // API routes
 app.use("/api/auth", authRoute);

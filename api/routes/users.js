@@ -1,9 +1,8 @@
 import express from 'express'
+import { updateUser } from '../controllers/usersController.js'
 
 const router = express.Router()
 
-router.get('/id', async(req, res) => {
-    const userId = req.params.id
-})
+router.put('/update', updateUser)
 
 export default router

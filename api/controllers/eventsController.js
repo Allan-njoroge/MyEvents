@@ -1,4 +1,4 @@
-import { db } from '../db.js'
+import { db } from '../utils/db.js'
 
 // Get all events
 export const getAllEvents = async (req, res) => {
